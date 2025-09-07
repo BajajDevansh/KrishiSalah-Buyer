@@ -64,7 +64,7 @@ APIs: RESTful APIs for communication between buyer and seller apps
 
 🚦 How to Run
 
-Clone the repository:git clone https://github.com/BajajDevansh/Krishi-Salah-Buyer-App.git
+Clone the repository:git clone https://github.com/BajajDevansh/KrishiSalah-Buyer.git
 
 Open in Android Studio.
 
