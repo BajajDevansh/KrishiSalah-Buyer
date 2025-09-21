@@ -25,14 +25,13 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.codesmiths.krishisalah_buyer.R
 
 @Composable
-@Preview(showSystemUi = true)
-fun WelcomePage(){
+fun WelcomePage(navController: NavController){
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -76,7 +75,9 @@ fun WelcomePage(){
                         modifier = Modifier
                             .fillMaxWidth()
                             .padding(start = 32.dp, end = 32.dp, bottom = 10.dp),
-                        onClick = {}) {
+                        onClick = {
+                            navController.navigate("login")
+                        }) {
                         Text("Login", fontSize = 22.sp, color = colorResource(R.color.app_green))
                     }
                     Button(
@@ -86,7 +87,9 @@ fun WelcomePage(){
                         ), modifier = Modifier
                             .fillMaxWidth()
                             .padding(horizontal = 32.dp),
-                        onClick = {}) {
+                        onClick = {
+                            navController.navigate("signup")
+                        }) {
                         Text(
                             "Sign Up",
                             fontSize = 22.sp,
